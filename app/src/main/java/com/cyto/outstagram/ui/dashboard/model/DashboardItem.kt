@@ -12,14 +12,14 @@ data class MediaItem(
 
 data class UserPost(
     @SerializedName("post_id") val postId: String,
-    @SerializedName("caption") val caption: String,
+    val caption: String,
     @SerializedName("post_category") val postCategory: String,
     @SerializedName("datetime_posted") val datetimePosted: String,
     @SerializedName("author_user_id") val authorUserId: Int, // Or String, depending on your data
     @SerializedName("highlighted_by_author") val highlightedByAuthor: Boolean,
     @SerializedName("is_liked") val isLiked: Boolean,
     @SerializedName("media_urls") val mediaUrls: List<MediaItem>,
-    @SerializedName("author") val author: String,
+    val author: String,
 )
 
 data class DashboardItem(val user: UserPublic, val posts: List<UserPost>)
