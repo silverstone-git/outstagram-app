@@ -28,10 +28,11 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val textView: TextView = binding.profileName
+        dashboardViewModel.dashboardItem.observe(viewLifecycleOwner) {
+            textView.text = it.user.username
         }
+
         return root
     }
 
