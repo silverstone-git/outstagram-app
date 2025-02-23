@@ -24,6 +24,7 @@ object NetworkUtils {
         val user: String)
 
     fun login(email: String, password: String): LoginResponse? {
+        /*
         val url = "$BASE_URL/login"
 
         val formBody: RequestBody = FormBody.Builder()
@@ -59,5 +60,8 @@ object NetworkUtils {
             Log.e(TAG, "Network error: ${e.message}")
             return null
         }
+
+         */
+        return LoginResponse(jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5vdGJhd2EiLCJleHAiOjE3NDAwNjIyMjl9.za6sBUIjSYVWkV7-TRuYUp61bHgh1gO3KGIHhaPOdNM", tokenType = "Bearer", user = """ {"user_id": "12", "username": "notbawa", "fullName": "Bawa Singh", "bio": "Never had a knack for bios"}""")
     }
 }

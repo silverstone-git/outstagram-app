@@ -26,9 +26,9 @@ class HomeViewModel : ViewModel() {
     private fun loadHomeItems() {
         // Simulate loading data
         val items = listOf(
-            HomeItem(1, "Post 1", "Description 1"),
-            HomeItem(2, "Post 2", "Description 2"),
-            HomeItem(3, "Post 3", "Description 3")
+            HomeItem(1, "Post 1", "Description 1", imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/57/Shrimp_Jesus_example.jpg"),
+            HomeItem(2, "Post 2", "Description 2", imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/57/Shrimp_Jesus_example.jpg"),
+            HomeItem(3, "Post 3", "Description 3", imageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/57/Shrimp_Jesus_example.jpg")
         )
         _homeItems.value = items
     }

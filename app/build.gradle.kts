@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -35,6 +36,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 }
 
@@ -51,6 +53,24 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.jwtdecode)
     implementation(libs.okhttp)
+    implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.compiler)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.ui.tooling)
+    implementation(libs.androidx.ui.test.junit4)
+    implementation(libs.ui)
+    implementation(libs.androidx.material)
+    debugImplementation(libs.androidx.compose.ui.ui.test.manifest)
+    debugImplementation(libs.androidx.compose.ui.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

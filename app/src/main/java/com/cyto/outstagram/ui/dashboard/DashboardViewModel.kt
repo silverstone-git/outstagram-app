@@ -51,9 +51,9 @@ class DashboardViewModel(application: Application) : AndroidViewModel(applicatio
 
         //user coming from auth / login request, stored to local cache when responded
         val userJson = sharedPreferences.getString("user", null)
+        Log.d("DashboardViewModel", "User JSON: $userJson")
         if (userJson == null) {
             Log.d("DashboardViewModel", "User is null")
-            return
         }
         val user = gson.fromJson(userJson, UserPublic::class.java)
 

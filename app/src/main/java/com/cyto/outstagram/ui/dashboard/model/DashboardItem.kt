@@ -3,7 +3,7 @@ package com.cyto.outstagram.ui.dashboard.model
 import java.util.Date
 import com.google.gson.annotations.SerializedName
 
-data class UserPublic(val userId: String, val username: String, val fullName: String, val bio: String)
+data class UserPublic(@SerializedName("user_id") val userId: String, val username: String, val fullName: String, val bio: String)
 
 data class MediaItem(
     val url: String,  // Adjust property names as needed
